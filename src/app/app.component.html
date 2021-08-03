@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>BeFit</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+  <style type="text/css">
+  *{
+  margin: 0px;
+  padding: 0px;
+
+  }
+body{
+  position: absolute;
+  margin: 0px;
+  padding: 0px;
+  background: linear-gradient(to left,grey,whitesmoke);
+}
+
+.logo{
+  position: absolute;
+  top: 10px;
+}
+.menu{
+  padding: 33px;
+  background: black;
+  text-align: center;
+  font-size: 22px;
+  font-weight: 600;
+}
+.menu nav{
+  width: 100%;
+  background: black;
+  overflow: auto;
+}
+.menu ul{
+  margin:0 0 0 150px;
+  list-style: none;
+}
+.menu li{
+  float: left;
+}
+.menu .fas{
+  margin-right: 8px;
+}
+.menu ul{
+  margin-left: 320px;
+  display: inline-flex;
+  list-style: none;
+  color: whitesmoke;
+}
+.menu ul li{
+  width: 129px;
+  margin: 15px;
+  padding: 15px;
+}
+.menu ul li a{
+  text-decoration: none;
+  color: whitesmoke;
+}
+.menu ul li:hover{
+  background: #b2d444;
+  border-radius: 30px;
+  transition: 0.6s;
+}
+
+.Sub-menu-1{
+  display: none;
+}
+.menu ul li:hover .Sub-menu-1{
+  margin-top: 15px;
+  margin-left: -15px;
+  display: block;
+  position: absolute;
+  background: black;
+  
+}
+.menu ul li:hover .Sub-menu-1 ul{
+  display: block;
+  margin: 10px;
+}
+.menu ul li:hover .Sub-menu-1 ul li{
+  
+  text-align: left;
+  width: 170px;
+  padding: 10px;
+}
+
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <a href="#logo"><img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRp2LPqaBYZiVhKrphu0d_fJBNy8F6-WI6oJQ&usqp=CAU"></a>
+    <div class="menu">
+      <nav>
+        
+          <ul>
+        <li><i class="fas fa-home"></i><a routerLink="/home">Home</a></li>
+        <li><i class="fas fa-user"></i><a routerLink="/about">About Us</a></li>
+        <li><i class="fas fa-dumbbell"></i><a routerLink="/">Workouts</a>
+        <div class="Sub-menu-1">
+          <ul>
+            <li><a routerLink="/homeworkouts">Home Workouts</a></li><br>
+            <li><a routerLink="/gymworkouts">Gym Workouts</a></li><br>
+            <li><a routerLink="/cardioworkouts">Cardio Workouts</a></li><br>
+          </ul>
+        </div>
+      </li>
+      <li><i class="fas fa-utensils"></i><a routerLink="/">Diet Plans</a>
+        <div class="Sub-menu-1">
+          <ul>
+            <li><a routerLink="/weightloss">Weight Loss</a></li><br>
+            <li><a routerLink="/weightgain">Weight Gain</a></li><br>
+          </ul>
+        </div>
+      </li>
+        <li><i class="fas fa-phone"></i><a routerLink="/contact">Contact</a></li></ul>
+      
+      </nav>
+      </div>
+      <router-outlet></router-outlet>
+  </header>
+  
+ <footer>
+   <h2 style="text-align:center; background-color: grey">&copy; Bfit copyrigted 2021</h2>
+ </footer>
+ 
+</body>
+</html>
